@@ -1,5 +1,5 @@
 import { Request, Response } from "express"
-import { mockedProducts } from "../data/mocked_products_data"
+import { mockedProducts } from "../data"
 
 export const getProducts = (req: Request, res: Response) => {
 

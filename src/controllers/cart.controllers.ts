@@ -1,13 +1,18 @@
 import { Request, Response } from 'express';
 import { findProductById } from '../helpers/findProductById';
+import { cart } from '../data';
+
+
 
 export const getCart = (req: Request, res: Response) => {
 
     res.json({ 
-        message: 'getCart controller' 
+        ok: true,
+        cart
     });
 
 };
+
 
 export const addToCart = (req: Request, res: Response) => {
 
@@ -22,9 +27,11 @@ export const addToCart = (req: Request, res: Response) => {
         })
     }
 
+    cart.push( product )
+
     res.status(200).json({ 
         ok: true,
-        message: 'Product added to cart',
+        message: `Product with id: ${ productId } added to cart`,
         product
     });
 
