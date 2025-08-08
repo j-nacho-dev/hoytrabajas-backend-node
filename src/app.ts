@@ -16,7 +16,6 @@ app.use( express.json() )
 
 // Routes
 app.use('/products', productsRoutes)
-app.use('/cart/:id', cartRoutes)
 app.use('/cart', cartRoutes)
 
 

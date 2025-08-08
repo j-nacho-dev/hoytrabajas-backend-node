@@ -5,6 +5,6 @@ const router = Router();
 
 router.get('/', getCart);
 
-router.post('/', addToCart);
+router.post('/:id', addToCart);
 
 export default router;
