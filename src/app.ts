@@ -1,5 +1,6 @@
 import express from 'express';
 import cors from 'cors';
+import { productsRoutes, cartRoutes } from './routes';
 
 // Create Express server
 const app = express();
@@ -12,6 +13,11 @@ app.use( express.static('public') )
 
 // Middleware to parse incoming JSON
 app.use( express.json() )
+
+// Routes
+app.use('/products', productsRoutes)
+app.use('/cart/:id', cartRoutes)
+app.use('/cart', cartRoutes)
 
 
 // Listen Port
