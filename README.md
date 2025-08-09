@@ -15,6 +15,8 @@ npm install
 # Ejecutar en desarrollo
 npm run dev
 
+# Utilizando Postman se puede interactuar con la API y probarla
+
 # Compilar y ejecutar en producción
 npm run build
 npm start
@@ -27,7 +29,7 @@ npm start
 GET / products
 Devuelve todos los productos disponibles.
 
-```bash
+```js
     {
         "ok": true,
         "products": [ 
@@ -41,7 +43,7 @@ Devuelve todos los productos disponibles.
 
 POST /cart/:id
 Agrega un producto al carrito por su ID.
-```bash
+```js
    {
         "ok": true,
         "message": "Product with id: 1 added to cart",
@@ -51,7 +53,7 @@ Agrega un producto al carrito por su ID.
 
 GET /cart
 Devuelve el contenido del carrito.
-```bash
+```js
   {
     "ok": true,
     "cart": [ { "id": 1, "name": "Producto 1", "price": 60 } ]
